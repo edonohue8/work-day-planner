@@ -90,3 +90,9 @@ body {
     font-size: 40px;
     transition: all .3s ease-in-out;
   }
+
+  /* Footer styling */
+
+.footer {
+  text-align: center;
+}
