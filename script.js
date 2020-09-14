@@ -27,7 +27,7 @@ $(window).on("load", function () {
                 timeIndex = refreshedAppointments.time;
                 timeIndex = timeIndex.replace(":00", '');
                 if (details !== null) {
-                    $("#" + timeIndex).children('div').children('div').children('textarea').val(details);
+                    $("#" + timeIndex).children('article').children('article').children('textarea').val(details);
                 }
             }
         }
@@ -41,15 +41,15 @@ $(window).on("load", function () {
         highlightHour = i;
         if (currentTime == i) {
             $('#' + highlightHour).addClass("present");
-            $('#' + highlightHour).children('div').children('div').children("textarea").addClass("present");
+            $('#' + highlightHour).children('article').children('article').children("textarea").addClass("present");
         }
         else if (currentTime > i) {
             $('#' + highlightHour).addClass("past");
-            $('#' + highlightHour).children('div').children('div').children("textarea").addClass("past");
+            $('#' + highlightHour).children('article').children('article').children("textarea").addClass("past");
         }
         else {
             $('#' + highlightHour).addClass("future");
-            $('#' + highlightHour).children('div').children('div').children("textarea").addClass("future");
+            $('#' + highlightHour).children('article').children('article').children("textarea").addClass("future");
         }
     }
 });
@@ -57,8 +57,8 @@ $(window).on("load", function () {
 // Code for save button
 
 $(".saveBtn").click(function () {
-    designateText = $(this).parent('div').children('div').children('textarea').val();
-    designateTime = $(this).parent('div').parent().attr("id");
+    designateText = $(this).parent('article').children('article').children('textarea').val();
+    designateTime = $(this).parent('article').parent().attr("id");
     appointment = {
         time: designateTime,
         details: designateText
@@ -72,5 +72,5 @@ $(".saveBtn").click(function () {
         localStorage.setItem("appointments", JSON.stringify(tempArray));
 
     }
-    $(this).parent('div').children('div').children('textarea').replaceWith($('<textarea>' + designateText.addClass("textarea") + '</textarea>'));
+    $(this).parent('article').children('article').children('textarea').replaceWith($('<textarea>' + designateText.addClass("textarea") + '</textarea>'));
 });
