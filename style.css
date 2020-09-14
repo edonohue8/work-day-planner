@@ -14,7 +14,7 @@ body {
     border: none;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
+    border-left: 1px solid #000000;
     padding: 10px;
   }
 
@@ -26,9 +26,9 @@ body {
   .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: black;
+    color: #000000;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #000000;
   }
   
   .description{
@@ -43,11 +43,11 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
+    border-top: 1px solid #FFFFFF;
   }
   
   .hour {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     color: #000000;
     border-top: 1px dashed #000000;
     border-bottom: 1px dashed #000000;
@@ -58,7 +58,7 @@ body {
   }
 
   .past {
-    background-color: #d3d3d3;
+    background-color: #D3D3D3;
     color: #000000;
   }
   
